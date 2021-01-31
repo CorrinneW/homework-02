@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    /*Sitewide color palette. Use main color for branding, icons, etc. Shades are background or text colors. Use accents to draw attention.*/
+    --light-shade: #DEAFB6;
+    --light-accent: #D4B80E;
+    --main-color: #AD72A8;
+    --dark-accent: #8A533F;
+    --dark-shade: #2A2B2F;
+}
+
+/*fonts, text sizes, colors and effects*/
+
+h1{}
+
+h2{}
+
+h3{}
+
+p{}
+
+a{}
+
+body{
+
+}
+
+header{
+
+}
+
+nav{
+
+}
+
+
