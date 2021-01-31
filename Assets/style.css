@@ -15,13 +15,21 @@
 
 /*fonts, text sizes, colors and effects*/
 
-h1{}
+h1{
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
 
-h2{}
+h2{
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+}
 
-h3{}
+h3{
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif; 
+}
 
-p{}
+p{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
 
 a{}
 
@@ -34,7 +42,10 @@ header{
 }
 
 nav{
-
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
+
+footer{}
 
 
