@@ -11,41 +11,88 @@
     --main-color: #AD72A8;
     --dark-accent: #8A533F;
     --dark-shade: #2A2B2F;
+    
+    /*Default mobile font size used for relative sizing. Heading*/
+    font-size: 16px;
 }
 
 /*fonts, text sizes, colors and effects*/
-
-h1{
-    font-family: 'Oleo Script Swash Caps', cursive;
-}
-
-h2{
-    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
-}
-
-h3{
-    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif; 
-}
-
 p{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-a{}
+a{
+    color: inherit;
+    text-decoration: none;
+}
 
 body{
-
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
 }
 
-header{
-
+header {
+    background-image: linear-gradient(#deafb6, #ffffff);
 }
 
-nav{
+.header-text {
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: var(--dark-accent);
+}
+
+header h3 {
+    margin: 0px;
+    font-size: 1rem;
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+    color: var(--main-color);
+}
+
+header nav {
+    margin: 0px;
+    width: 100%;
+}
+
+header nav ul {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 2%;
+    border-bottom: .3em dotted;
+    border-color: var(--light-shade);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--main-color)
+}
+
+.dark-li {
+    background-color: var(--dark-shade);
+    color: var(--light-accent);
+}
+
+.light-li {
+    background-color: var(--light-shade);
+    color: var(--dark-shade);
 }
 
 footer{}
+
+/*media breakpoints*/
+
+@media screen and (max-width: 780px)
 
 
