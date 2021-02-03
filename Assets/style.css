@@ -5,27 +5,103 @@
 }
 
 :root{
-    /*Sitewide color palette. Use main color for branding, icons, etc. Shades are background or text colors. Use accents to draw attention.*/
+    /*sitewide color palette. Use main color for branding, icons, etc. Shades are background or text colors. Use accents to draw attention.*/
     --light-shade: #DEAFB6;
     --light-accent: #D4B80E;
     --main-color: #AD72A8;
     --dark-accent: #8A533F;
     --dark-shade: #2A2B2F;
-    
-    /*Default mobile font size used for relative sizing. Heading*/
-    font-size: 16px;
 }
 
-/*fonts, text sizes, colors and effects*/
-p{
+/* sitewide fonts and sizes*/
+p {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
+h1 {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 1.5rem;
+}
+h2 {
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+}
+
+/*header styling*/
+header {
+    margin: 0;
+    width: 100%;
+    background-color: var(--light-accent);
+    padding: 1rem 0;
+}
+
+/*h1 fades in on site load*/
+
+header h1 {
+    margin: 0.5rem 1rem;
+    color: var(--dark-shade);
+    -webkit-animation: 4s fadein; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: 4s fadein; /* Firefox < 16 */
+    -ms-animation: 4s fadein; /* Internet Explorer */
+    -o-animation: 4s fadein; /* Opera < 12.1 */
+    animation: 4s fadein;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#intro {
+    margin: 0 0.7rem;
+    color: var(--main-color);
+}
+
+/*subheader-background transitions in from the right and subheader fades in after delay*/
+
+#subheader-background {
+    margin: .5rem 0;
+    width: 70%;
+    background-color: var(--main-color);
+    border-radius: 0 1em 1em 0;
+    box-shadow: 0.2em 0.3em 0.5em var(--dark-shade);
+
+}
+
+#subheader {
+    margin: .5rem 0;
+    padding: 0.3rem 0.7rem 0.2rem 0.7rem;
+    color: var(--light-shade);
+    font-size: 0.8rem;
+    opacity: 0;
+    -webkit-animation: 4s fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: 4s fadein 2s forwards; /* Firefox < 16 */
+    -ms-animation: 4s fadein 2s forwards; /* Internet Explorer */
+    -o-animation: 4s fadein 2s forwards; /* Opera < 12.1 */
+    animation: 4s fadein 2s forwards;
+}
+
+
+
+
+
+/* Old version
 body{
     display: flex;
     flex-direction: column;
@@ -39,7 +115,7 @@ header {
 .header-text {
     width: 100%;
     text-align: center;
-    padding: 3rem;
+    padding: 1.5rem .3rem;
 }
 
 header h1 {
@@ -51,7 +127,7 @@ header h1 {
 
 header h3 {
     margin: 0px;
-    font-size: 1rem;
+    font-size: .8rem;
     font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
     color: var(--main-color);
 }
@@ -69,7 +145,7 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 2%;
+    padding: 0.3rem;
     border-bottom: .3em dotted;
     border-color: var(--light-shade);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -79,20 +155,27 @@ header nav ul li {
     color: var(--main-color)
 }
 
-.dark-li {
-    background-color: var(--dark-shade);
-    color: var(--light-accent);
-}
-
-.light-li {
-    background-color: var(--light-shade);
-    color: var(--dark-shade);
-}
-
-footer{}
+footer{
+    font-size: 0.5em;
+    color: var()
+}*/
 
 /*media breakpoints*/
 
-@media screen and (max-width: 780px)
+@media screen and (max-width: 420px) {
+    :root {
+        font-size: 16px;
+    }
+}
 
+@media screen and (max-width: 760px) {
+    :root {
+        font-size: 24px;
+    }
+}
 
+@media screen and (min-width: 760px) {
+    :root {
+        font-size: 32px;
+    }
+}
