@@ -26,11 +26,11 @@ a {
 
 h1 {
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 h2 {
     font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 h3 {
@@ -56,6 +56,9 @@ header {
 header h1 {
     margin: 0.5rem 1rem;
     color: var(--dark-shade);
+}
+
+header h1.fadein {
     -webkit-animation: 4s fadein; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: 4s fadein; /* Firefox < 16 */
     -ms-animation: 4s fadein; /* Internet Explorer */
@@ -73,28 +76,36 @@ header h1 {
     color: var(--main-color);
 }
 
-/*subheader-background transitions in from the right and subheader fades in after delay*/
+/*subheader slides in from the left after brief delay*/
 
-#subheader-background {
-    margin: .5rem 0;
-    width: 70%;
+/*subheader styling*/
+header h2#subheader{
+    margin: 0.5rem 0;
+    height: auto;
+    color: var(--light-shade);
     background-color: var(--main-color);
     border-radius: 0 1em 1em 0;
     box-shadow: 0.2em 0.3em 0.5em var(--dark-shade);
-
+    padding: 0.3rem 0.7rem 0.2rem 0.7rem; 
 }
 
-#subheader {
-    margin: .5rem 0;
-    padding: 0.3rem 0.7rem 0.2rem 0.7rem;
-    color: var(--light-shade);
-    font-size: 0.8rem;
-    opacity: 0;
-    -webkit-animation: 4s fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: 4s fadein 2s forwards; /* Firefox < 16 */
-    -ms-animation: 4s fadein 2s forwards; /* Internet Explorer */
-    -o-animation: 4s fadein 2s forwards; /* Opera < 12.1 */
-    animation: 4s fadein 2s forwards;
+/*subheader animation control*/
+.slide-right {
+    overflow: hidden;
+    margin-left: 0;
+    max-width: inherit;
+}
+    
+header h2.slide-right {
+    animation: 2s slide-right 1s forwards;
+    transform:translateX(-100%);
+}
+    
+@keyframes slide-right {
+    to {
+    transform:translateX(0);
+    }
+
 }
 
 
@@ -160,22 +171,65 @@ footer{
     color: var()
 }*/
 
+
+
 /*media breakpoints*/
 
-@media screen and (max-width: 420px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     :root {
         font-size: 16px;
     }
-}
+    
+    #subheader{
+        max-width: 70%;
+    }
+}  
 
-@media screen and (max-width: 760px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    :root {
+        font-size: 20px;
+    }
+
+    #subheader{
+        max-width: 60%;
+    }
+  }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
     :root {
         font-size: 24px;
     }
-}
 
-@media screen and (min-width: 760px) {
+    #subheader{
+        max-width: 50%;
+    }
+  }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    :root {
+        font-size: 28px;
+    }
+
+    #subheader{
+        max-width: 40%;
+    }
+  }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
     :root {
         font-size: 32px;
     }
-}
+
+    #subheader{
+        max-width: 30%;
+    }
+  }
+  }
