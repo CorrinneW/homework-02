@@ -43,6 +43,8 @@ body {
     background-color: #fff;
 }
 
+
+
 /*header styling*/
 header {
     margin: 0;
@@ -84,8 +86,8 @@ header h2#subheader{
     height: auto;
     color: var(--light-shade);
     background-color: var(--main-color);
-    border-radius: 0 1em 1em 0;
-    box-shadow: 0.2em 0.3em 0.5em var(--dark-shade);
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0.2rem 0.3rem 0.5rem var(--dark-shade);
     padding: 0.3rem 0.7rem 0.2rem 0.7rem; 
 }
 
@@ -109,6 +111,55 @@ header h2.slide-right {
 }
 
 
+/*navigation menu*/
+
+nav {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav h2 {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--dark-shade);
+    color: var(--light-shade);
+    text-align: center;
+}
+
+nav h2::before {
+    content: "• ";
+}
+
+nav h2::after {
+    content: " •"
+}
+
+nav ul {
+    width: 60%;
+    padding: 1rem 0;
+    list-style: none;
+    background-color: var(--light-shade);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0.2rem 0.1rem 0.5rem var(--dark-shade);
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    padding: .5rem 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--main-color);
+    border-bottom: .3rem dotted;
+    border-color: var(--main-color)
+}
+
+/*nav dropdown transitions*/
+nav ul.nav-dropdown
 
 
 
