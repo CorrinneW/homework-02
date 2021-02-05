@@ -43,7 +43,7 @@ h3 {
 
 body {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--light-shade);
 }
 
 
@@ -87,7 +87,7 @@ header h1.fadein {
 #subheader{
     margin: 0.5rem 0;
     height: auto;
-    max-width: 70%;
+    max-width: 60%;
     color: var(--light-shade);
     background-color: var(--main-color);
     border-radius: 0 1rem 1rem 0;
@@ -118,6 +118,8 @@ header h2.slide-right {
 .dropdown {
     margin: 0;
     width: 100%;
+    position: absolute;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,8 +151,12 @@ header h2.slide-right {
     box-shadow: 0.2rem 0.1rem 0.5rem var(--dark-shade);
 }
 
+/*.dropdown:hover offers desktop control
+.dropdown:active allows menu to be opened on mobile.
+need a way to close the menu in mobile, coming back to it later.
+*/
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:current .dropdown-content {display: block;}
+.dropdown:active .dropdown-content {display: block;}
 
 nav ul li {
     margin: 0 1.5rem;
@@ -162,6 +168,75 @@ nav ul li {
     color: var(--main-color);
     border-bottom: .3rem dotted;
     border-color: var(--main-color)
+}
+
+/*body of web page*/
+.wrapper {
+display: flex;
+justify-content: center;
+max-width: 100%
+}
+
+.body {
+    margin: 3rem 1rem 0 1rem;
+    align-self: center;
+}
+
+.body-section {
+    display: flex;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.body-section h2 {
+    width: auto;
+    text-align: right;
+    color: var(--main-color)
+}
+
+.body-contents {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.3rem;
+    padding-left: 1rem;
+}
+
+/*about section*/
+
+.about-img {
+    width: 50%;
+    height: auto;
+}
+
+/*projects section*/
+.project-grid{
+    display: grid;
+    margin-left: 0.3rem;
+    padding-left: 1rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 15px;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+} 
+
+#first-img {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*copyright text*/
+footer{
+    margin-left: 1rem;
+    font-size: 0.5rem;
+    color: var(--main-color);
 }
 
 /* Old version
@@ -218,10 +293,7 @@ header nav ul li {
     color: var(--main-color)
 }
 
-footer{
-    font-size: 0.5em;
-    color: var()
-}*/
+*/
 
 
 
@@ -230,11 +302,7 @@ footer{
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     :root {
-        font-size: 20px;
-    }
-
-    #subheader{
-        max-width: 60%;
+        font-size: 24px;
     }
   }
   
@@ -242,11 +310,7 @@ footer{
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     :root {
-        font-size: 24px;
-    }
-
-    #subheader{
-        max-width: 50%;
+        font-size: 32px;
     }
   }
   
@@ -254,11 +318,7 @@ footer{
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     :root {
-        font-size: 28px;
-    }
-
-    #subheader{
-        max-width: 40%;
+        font-size: 40px;
     }
   }
   
@@ -266,10 +326,6 @@ footer{
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     :root {
-        font-size: 32px;
-    }
-
-    #subheader{
-        max-width: 30%;
+        font-size: 48px;
     }
   }
