@@ -11,6 +11,9 @@
     --main-color: #AD72A8;
     --dark-accent: #8A533F;
     --dark-shade: #2A2B2F;
+
+    /*default viewport size is >600px wide. See bottom of document for media break points.*/
+    font-size: 16px; 
 }
 
 /* sitewide fonts and sizes*/
@@ -30,7 +33,7 @@ h1 {
 }
 h2 {
     font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
 h3 {
@@ -81,9 +84,10 @@ header h1.fadein {
 /*subheader slides in from the left after brief delay*/
 
 /*subheader styling*/
-header h2#subheader{
+#subheader{
     margin: 0.5rem 0;
     height: auto;
+    max-width: 70%;
     color: var(--light-shade);
     background-color: var(--main-color);
     border-radius: 0 1rem 1rem 0;
@@ -110,10 +114,8 @@ header h2.slide-right {
 
 }
 
-
-/*navigation menu*/
-
-nav {
+/*nav dropdown*/
+.dropdown {
     margin: 0;
     width: 100%;
     display: flex;
@@ -121,7 +123,7 @@ nav {
     align-items: center;
 }
 
-nav h2 {
+.drop-button {
     width: 100%;
     padding: 0.6rem;
     background-color: var(--dark-shade);
@@ -129,15 +131,16 @@ nav h2 {
     text-align: center;
 }
 
-nav h2::before {
+.drop-button h2::before {
     content: "• ";
 }
 
-nav h2::after {
+.drop-button h2::after {
     content: " •"
 }
 
-nav ul {
+.dropdown-content{
+    display: none;
     width: 60%;
     padding: 1rem 0;
     list-style: none;
@@ -145,6 +148,9 @@ nav ul {
     border-radius: 0 0 1rem 1rem;
     box-shadow: 0.2rem 0.1rem 0.5rem var(--dark-shade);
 }
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:current .dropdown-content {display: block;}
 
 nav ul li {
     margin: 0 1.5rem;
@@ -157,11 +163,6 @@ nav ul li {
     border-bottom: .3rem dotted;
     border-color: var(--main-color)
 }
-
-/*nav dropdown transitions*/
-nav ul.nav-dropdown
-
-
 
 /* Old version
 body{
@@ -226,17 +227,6 @@ footer{
 
 /*media breakpoints*/
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    :root {
-        font-size: 16px;
-    }
-    
-    #subheader{
-        max-width: 70%;
-    }
-}  
-
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     :root {
@@ -247,7 +237,7 @@ footer{
         max-width: 60%;
     }
   }
-  }
+  
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -259,7 +249,7 @@ footer{
         max-width: 50%;
     }
   }
-  } 
+  
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
@@ -271,7 +261,7 @@ footer{
         max-width: 40%;
     }
   }
-  } 
+  
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
@@ -282,5 +272,4 @@ footer{
     #subheader{
         max-width: 30%;
     }
-  }
   }
