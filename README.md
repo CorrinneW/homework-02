@@ -1,5 +1,26 @@
 # homework-02
 Personal portfolio assignment.
+
+## The Assignment
+Create a responsive web portfolio to display future web-design projects.
+
+## What I Did
+1. Utilized mobile-first design and media queries to scale the website up as the viewport size increases.
+
+2. Used CSS flexbox and grid models to create website layout.
+
+3. Used CSS animations to create an attractive header and an interactive navigation menu.
+
+4. Used anchor links to control website navigation.
+
+5. Used placeholder images to stand in for future web development projects.
+
+## The Result
+
+An interactive and responsive portfolio to share with potential employers.
+
+![website-preview](https://github.com/CorrinneW/homework-02/blob/main/Assets/images/preview.gif)
+
 # credits
 normalize.css from http://necolas.github.io/normalize.css/  
 Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
