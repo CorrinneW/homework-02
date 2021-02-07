@@ -19,6 +19,8 @@ Create a responsive web portfolio to display future web-design projects.
 
 An interactive and responsive portfolio to share with potential employers.
 
+https://corrinnew.github.io/homework-02/
+
 ![website-preview](https://github.com/CorrinneW/homework-02/blob/main/Assets/images/preview.gif)
 
 # credits
