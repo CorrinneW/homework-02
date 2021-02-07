@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    /*sitewide color palette. Use main color for branding, icons, etc. Shades are background or text colors. Use accents to draw attention.*/
+    --light-shade: #DEAFB6;
+    --light-accent: #D4B80E;
+    --main-color: #AD72A8;
+    --dark-accent: #8A533F;
+    --dark-shade: #2A2B2F;
+
+    /*default viewport size is >600px wide. See bottom of document for media break points.*/
+    font-size: 16px; 
+}
+
+/* sitewide fonts and sizes*/
+p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 2rem;
+}
+h2 {
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+}
+
+
+
+/*header styling*/
+header {
+    margin: 0;
+    width: 100%;
+    background-color: var(--light-accent);
+    padding: 1rem 0;
+}
+
+/*h1 fades in on site load*/
+
+header h1 {
+    margin: 0.5rem 1rem;
+    color: var(--dark-shade);
+}
+
+header h1.fadein {
+    -webkit-animation: 4s fadein; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: 4s fadein; /* Firefox < 16 */
+    -ms-animation: 4s fadein; /* Internet Explorer */
+    -o-animation: 4s fadein; /* Opera < 12.1 */
+    animation: 4s fadein;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#intro {
+    margin: 0 0.7rem;
+    color: var(--main-color);
+}
+
+/*subheader slides in from the left after brief delay*/
+
+/*subheader styling*/
+#subheader{
+    margin: 0.5rem 0;
+    height: auto;
+    max-width: 60%;
+    color: var(--light-shade);
+    background-color: var(--main-color);
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0.2rem 0.3rem 0.5rem var(--dark-shade);
+    padding: 0.3rem 0.7rem 0.2rem 0.7rem; 
+}
+
+/*subheader animation control*/
+.slide-right {
+    overflow: hidden;
+    margin-left: 0;
+    max-width: inherit;
+}
+    
+header h2.slide-right {
+    animation: 2s slide-right 1s forwards;
+    transform:translateX(-100%);
+}
+    
+@keyframes slide-right {
+    to {
+    transform:translateX(0);
+    }
+
+}
+
+/*nav dropdown*/
+.dropdown {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drop-button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--dark-shade);
+    color: var(--light-shade);
+    text-align: center;
+}
+
+.drop-button h2::before {
+    content: "• ";
+}
+
+.drop-button h2::after {
+    content: " •"
+}
+
+.dropdown-content{
+    display: none;
+    width: 60%;
+    padding: 1rem 0;
+    list-style: none;
+    background-color: var(--light-shade);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0.2rem 0.1rem 0.5rem var(--dark-shade);
+}
+
+/*.dropdown:hover offers desktop control
+.dropdown:active allows menu to be opened on mobile.
+need a way to close the menu in mobile, coming back to it later.
+*/
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:active .dropdown-content {display: block;}
+
+nav ul li {
+    margin: 0 1.5rem;
+    padding: .5rem 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--main-color);
+    border-bottom: .3rem dotted;
+    border-color: var(--main-color)
+}

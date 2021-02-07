@@ -43,7 +43,7 @@ h3 {
 
 body {
     width: 100%;
-    background-color: var(--light-shade);
+    background-color: var(--dark-shade);
 }
 
 
@@ -118,9 +118,9 @@ header h2.slide-right {
 .dropdown {
     margin: 0;
     width: 100%;
-    position: absolute;
-    z-index: 1;
     display: flex;
+    position: absolute;
+    z-index: 2;
     flex-direction: column;
     align-items: center;
 }
@@ -170,130 +170,137 @@ nav ul li {
     border-color: var(--main-color)
 }
 
-/*body of web page*/
+/*main sections*/
 .wrapper {
 display: flex;
-justify-content: center;
-max-width: 100%
+align-items: flex-start;
+width: 100%;
+align-self: center;
 }
 
-.body {
-    margin: 3rem 1rem 0 1rem;
-    align-self: center;
-}
-
-.body-section {
+.content {
     display: flex;
-    margin-bottom: 3rem;
-    padding: 1rem;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    background-image: linear-gradient(to right,#fff, var(--light-shade));
+    border-bottom: 3rem solid;
+    border-color: var(--dark-shade);
 }
 
-.body-section h2 {
+.content h2 {
+    margin-top: 2rem;
     width: auto;
-    text-align: right;
-    color: var(--main-color)
-}
-
-.body-contents {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0.3rem;
-    padding-left: 1rem;
-}
-
-/*about section*/
-
-.about-img {
-    width: 50%;
-    height: auto;
-}
-
-/*projects section*/
-.project-grid{
-    display: grid;
-    margin-left: 0.3rem;
-    padding-left: 1rem;
-    grid-template-columns: auto auto;
-    grid-template-rows: 2fr 1fr;
-    grid-gap: 15px;
-}
-
-.project-img {
-    width: 100%;
-    height: 100%;
-} 
-
-#first-img {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-/*copyright text*/
-footer{
-    margin-left: 1rem;
-    font-size: 0.5rem;
+    text-align: left;
     color: var(--main-color);
 }
 
-/* Old version
-body{
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
+/*about me*/
+
+#about {
+    padding-top: 3rem;
 }
 
-header {
-    background-image: linear-gradient(#deafb6, #ffffff);
+#about p {
+    padding-top: 1rem;
 }
 
-.header-text {
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem .3rem;
-}
-
-header h1 {
+#about img {
+    width: 16rem;
     margin: 0;
-    font-size: 2rem;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    color: var(--dark-accent);
-}
-
-header h3 {
-    margin: 0px;
-    font-size: .8rem;
-    font-family: 'Karma', Georgia, Times, 'Times New Roman', serif;
-    color: var(--main-color);
-}
-
-header nav {
-    margin: 0px;
-    width: 100%;
-}
-
-header nav ul {
-    margin: 0px;
     display: flex;
-    flex-direction: column;
-    list-style: none;
+    align-self: flex-end;
+    margin-right: -1rem;
 }
 
-header nav ul li {
-    padding: 0.3rem;
-    border-bottom: .3em dotted;
-    border-color: var(--light-shade);
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
+/*Projects grid*/
+#project-grid {
+    width: 100%;
+    height: 80%;
+    padding: 1rem 0 3rem 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8rem 8rem 8rem 8rem 8rem;
+    grid-gap: 0.5rem;
+}
+
+.box {
+    width: 100%;
+    height: 8rem;
+    background-color: var(--light-accent);
+}
+
+.box:hover {
+    opacity: 50%;
+}
+
+
+.box img {
+    width: 100%;
+    max-height: 8rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+#box-1 {
+    height: 16rem;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+ #box-1 img {
+     width: 100%;
+     max-height: 16rem;
+     object-fit: cover;
+ }
+
+
+.box-label {
+    width: 30%;
+    position: absolute;
+    float: left;
+    margin: 0 0 -3rem 0;
+    padding: 0.5rem;
+    background-color: var(--light-accent);
+    border-radius: 0 0 0.5rem 0;
+    box-shadow: 0.1rem 0.2rem 0.3rem var(--dark-shade);
+    z-index: 1;
+}
+
+/*contact info*/
+
+#contact-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 0.5rem;
+}
+
+.email-button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: var(--dark-shade);
+    color: var(--light-accent);
     text-align: center;
-    color: var(--main-color)
+    border-radius: 0.5rem;
+    box-shadow: inset 0.1rem 0.2rem 0.3rem #fff;
 }
 
-*/
+.social-link {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*footer*/
+
+footer {
+    margin: 1rem;
+    color: #fff;
+    font-size: 0.5rem;
+    text-align: center;
+}
 
 
 
